@@ -1,0 +1,26 @@
+$font-stack: "Space Grotesk", sans-serif;
+$font-body: "Manrope", sans-serif;
+$main-black: #0c0c0c;
+$white: #ffffff;
+$yellow: #ffd647;
+$orange: #ff6b00;
+$medium-font: 20px;
+$border-color: #e7e7e7;
+$black-opacity: rgba(12,12,12,.1);
+$grey: whitesmoke;
+$black: #000;
+$white-border: rgba(255, 255, 255, .1);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: $font-body;
+}
+a {
+    text-decoration: none;
+}
+img {
+    width: 100%;
+}

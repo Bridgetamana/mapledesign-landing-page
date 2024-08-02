@@ -1,0 +1,141 @@
+@import "../../app";
+.hero-section {
+  padding-top: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: $main-black;
+  justify-content: space-between;
+  //   height: 100vh;
+  padding-top: max(32px, min(4.6vh, 48px));
+  display: grid;
+  gap: 100px;
+  height: auto;
+  min-height: 50vh;
+}
+.logo-container {
+  z-index: 10;
+  position: relative;
+
+  img {
+    width: 6rem;
+  }
+}
+.title-container {
+  margin-bottom: 24px;
+}
+.slot-tag {
+  width: fit-content;
+  height: 20px;
+  color: $yellow;
+  background-color: rgba(255, 214, 71, 0.1);
+  border-radius: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 18px;
+}
+.slot-tag {
+  p {
+    letter-spacing: 0.24px;
+    font-weight: 300;
+    line-height: 1.2;
+    font-size: 14px;
+  }
+}
+.title {
+  color: $white;
+  text-transform: uppercase;
+  font-family: $font-stack;
+  font-weight: 600;
+  line-height: 108%;
+  font-size: 44px;
+}
+.description {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 300;
+}
+.button-wrapper {
+  gap: 21px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 18px;
+  a {
+    max-width: 100%;
+    color: $yellow;
+    div {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+  }
+}
+.bottom-border {
+  background-color: $yellow;
+  height: 1px;
+  width: 100%;
+  margin-top: 5px;
+}
+.client-avatar-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  img {
+    max-width: 100%;
+    position: relative;
+  }
+}
+.stars {
+  width: 70px;
+}
+.client-text {
+  font-family: $font-stack;
+  letter-spacing: 0.28px;
+  color: rgba(255, 255, 255, 0.9);
+}
+.client-review-container {
+  display: flex;
+  gap: 12px;
+}
+.companies-slider {
+  height: 75px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  position: relative;
+  overflow: hidden;
+
+  div {
+    display: flex;
+    align-items: center;
+    width: calc(9 * (5rem + 50px));
+    animation: scroll 10s linear infinite;
+    margin: 0 20px;
+
+    img {
+      width: 5rem;
+      margin-right: 50px;
+    }
+  }
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media (min-width: 768px) {
+  .companies-slider {
+    div {
+      img {
+        width: 8rem;
+      }
+    }
+  }
+}
