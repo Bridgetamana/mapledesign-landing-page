@@ -17,6 +17,15 @@ import Square from '../../assets/img/square-logo.svg';
 const HeroSection = () => {
     return (
         <div>
+            <div className='stickynav'>
+                <div className='menu-link-container'>
+                    <a href="#about" className='menu-link'>About</a>
+                    <a href="#services" className="menu-link">Services</a>
+                    <a href="#work" className="menu-link">Work</a>
+                    <a href="#price" className="menu-link">Pricing</a>
+                    <a href="#faqs" className="menu-link">FAQs</a>
+                </div>
+            </div>
             <section className="hero-section">
                 <div className='logo-container'>
                     <img src={Logo} alt="Mapledesign Logo" />

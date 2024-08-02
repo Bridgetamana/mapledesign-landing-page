@@ -1,15 +1,43 @@
 @import "../../app";
+.stickynav {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  background-color: $main-black;
+  border: 1px solid #ffffff1a;
+  border-radius: 54px;
+  justify-content: center;
+  align-items: center;
+  width: 479px;
+  height: 65px;
+  margin-top: 27px;
+  display: none;
+}
+.menu-link-container {
+  gap: 30px;
+  justify-content: space-between;
+  align-items: center;
+  height: 25px;
+  line-height: 23px;
+  display: flex;
+}
+.menu-link {
+  color: $white;
+  font-family: Manrope, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+}
 .hero-section {
   padding-top: 16px;
   padding-left: 16px;
   padding-right: 16px;
   background-color: $main-black;
   justify-content: space-between;
-  //   height: 100vh;
   padding-top: max(32px, min(4.6vh, 48px));
   display: grid;
   gap: 100px;
-  height: auto;
   min-height: 50vh;
 }
 .logo-container {
@@ -25,16 +53,14 @@
 }
 .slot-tag {
   width: fit-content;
-  height: 20px;
+  margin-bottom: 36px;
   color: $yellow;
   background-color: rgba(255, 214, 71, 0.1);
   border-radius: 32px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 8px 18px;
-}
-.slot-tag {
+  padding: 18px 28px;
   p {
     letter-spacing: 0.24px;
     font-weight: 300;
@@ -100,7 +126,7 @@
   gap: 12px;
 }
 .companies-slider {
-  height: 75px;
+  height: 85px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -138,4 +164,37 @@
       }
     }
   }
+  .title-container {
+    margin-bottom: max(64px, min(8.3vh, 86px));
+    margin-left: max(56px, min(4.09vw, 70px));
+    position: relative;
+  }
+  .logo-container {
+    margin-left: max(56px, min(4.09vw, 70px));
+  }
+  .hero-section {
+    gap: 50px;
+  }
+}
+@media (min-width: 970px) {
+  .title {
+    font-size: 84px;
+    letter-spacing: -1.7px;
+  }
+  .slot-tag {
+    p {
+      letter-spacing: 0.4px;
+      font-size: 18px;
+    }
+  }
+  .description {
+    font-size: 20px;
+    letter-spacing: 0.4px;
+  }
+  .hero-section {
+    gap: 10px;
+  }
+  .stickynav {
+  display: flex;
+}
 }
