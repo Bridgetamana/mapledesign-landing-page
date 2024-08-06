@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import Logo from '../../assets/img/Logo.svg';
 import Stars from "../../assets/img/star.svg";
 import Clients from "../../assets/img/clients.png"
@@ -15,6 +16,17 @@ import Square from '../../assets/img/square-logo.svg';
 
 
 const HeroSection = () => {
+
+    const [isLoading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setLoading(false);
+        }, 4000);
+
+        return () => clearTimeout(timer);
+    }, []);
+
     return (
         <div>
             <div className='stickynav'>
@@ -32,7 +44,14 @@ const HeroSection = () => {
                 </div>
                 <div className="title-container">
                     <span className="slot-tag">
-                        <p>Only 1 spot left</p>
+                        <span className='dot'></span>
+                        {isLoading ? (
+                            <p
+                                className={isLoading ? "" : "hidden"}
+                            >Loading slots...</p>
+                        ) : (
+                        <p>Only 2 spot left</p>
+                        )}
                     </span>
                     <div className="title">
                         Your On-Demand <br />

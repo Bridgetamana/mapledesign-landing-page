@@ -131,12 +131,6 @@
     padding-left: max(56px, min(4.09vw, 70px));
     padding-right: max(56px, min(4.09vw, 100px));
 
-    .title-tag {
-      font-size: 18px;
-      letter-spacing: 0.36px;
-      margin-top: 8px;
-    }
-
     .description-container {
       width: 80%;
       h4 {
@@ -153,6 +147,11 @@
       }
     }
   }
+  .title-tag {
+      font-size: 18px;
+      letter-spacing: 0.36px;
+      margin-top: 8px;
+    }
   .slide-wrapper {
     height: 440px;
   }
