@@ -1,0 +1,263 @@
+@import "../../app";
+
+// Price Section Styles
+.price-section {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 48px 18px;
+  gap: 32px;
+}
+
+// Price Title Container
+.price-title-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 0 18px;
+
+  h2 {
+    text-transform: uppercase;
+    font-family: $font-stack;
+    line-height: 108%;
+    font-size: 44px;
+    letter-spacing: -0.64px;
+  }
+
+  span {
+    color: $main-black;
+    font-weight: 300;
+    font-size: 14px;
+    margin-top: 4px;
+    line-height: 170%;
+    letter-spacing: 0.24px;
+  }
+}
+
+// Price Button
+.price-button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 22px;
+  margin-top: 18px;
+  color: $orange;
+}
+
+// Plans Wrapper
+.plans-wrapper {
+  display: grid;
+  gap: 16px;
+  grid-auto-columns: 1fr;
+  height: 100%;
+  align-items: stretch;
+  justify-content: center;
+
+  @media (min-width: 768px) {
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .plans-container:nth-child(3) {
+      grid-area: span 1 / span 2 / span 1 / span 2;
+    }
+  }
+}
+
+// Plans Container
+.plans-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $border-color;
+
+  &:hover {
+    background-color: rgb(12, 12, 12);
+    color: $white;
+    transition: background-color 0.6s ease-in-out;
+
+    .price {
+      color: $white;
+    }
+
+    .plans-service-icon {
+      filter: invert(1);
+    }
+
+    .plans-button-container {
+      background-color: rgb(37, 37, 37);
+      border-color: rgba(255, 255, 255, 0.1);
+      transition: background-color 0.6s ease-in-out;
+
+      p {
+        color: $white;
+      }
+    }
+
+    .price-buttons-container {
+      background-color: rgb(37, 37, 37);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: background-color 0.6s ease-in-out;
+    }
+
+    .price-action-button {
+      border-color: rgba(255, 255, 255, 0.1);
+      background-color: $white;
+      color: rgb(12, 12, 12);
+      transition: background-color 0.6s ease-in-out;
+    }
+
+    .discount-price {
+      color: $white;
+    }
+
+    .actual-price {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+}
+
+// Price Container
+.price-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  justify-content: space-between;
+  border-bottom: 1px solid $border-color;
+  padding: 16px 18px;
+
+  .price {
+    color: $main-black;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 33px;
+    font-size: 18px;
+    letter-spacing: -0.56px;
+  }
+
+  .price-description {
+    margin-top: 4px;
+  }
+}
+
+// Price Text Container
+.price-text-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 14px 16px 16px;
+
+  .plans-service-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+    height: 100%;
+
+    img {
+      width: 26px;
+    }
+  }
+}
+
+// Plans Button Container
+.plans-button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid $black-opacity;
+  gap: 8px;
+  padding: 10px 16px 12px;
+
+  p {
+    color: $main-black;
+    font-weight: 600;
+    text-align: center;
+    line-height: 25px;
+    font-size: 14px;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #c3c3c3;
+    width: 50px;
+    height: 14px;
+    border-radius: 100px;
+    position: relative;
+
+    div {
+      background-color: rgb(123, 123, 123);
+      width: 26px;
+      height: 26px;
+      border-radius: 100px;
+    }
+  }
+}
+
+// Price Buttons Container
+.price-buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+    padding-right: 10px;
+    gap: 0;
+  }
+}
+
+// Price Textholder
+.price-textholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+
+  @media (min-width: 768px) {
+    align-items: flex-start;
+    padding: 18px;
+  }
+
+  .discount-price {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 33px;
+    color: $main-black;
+    text-transform: uppercase;
+    letter-spacing: -0.56px;
+  }
+
+  .actual-price {
+    text-decoration: line-through;
+    color: #0c0c0c80;
+    font-size: 14px;
+  }
+}
+
+// Price Action Button
+.price-action-button {
+  cursor: pointer;
+  line-height: inherit;
+  color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  background-color: $main-black;
+  border-top: 1px solid $black-opacity;
+  height: 72px;
+  padding: 20px 0;
+
+  @media (min-width: 768px) {
+    width: 50%;
+    padding: 18px;
+  }
+}
