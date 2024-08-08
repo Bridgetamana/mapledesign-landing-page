@@ -1,5 +1,6 @@
 import './app.scss'
 import Aboutsection from './components/Aboutsection/Aboutsection'
+import Faq from './components/FAQ/Faq'
 import HeroSection from './components/Herosection/HeroSection'
 import Price from './components/Price/Price'
 import Service from './components/Service/Service'
@@ -15,6 +16,7 @@ function App() {
       <Work />
       <Price />
       <Testimonial />
+      <Faq />
     </div>
   )
 }

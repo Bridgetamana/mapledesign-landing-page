@@ -1,1 +1,102 @@
 @import "../../app";
+.faq-section {
+  display: flex;
+  flex-flow: column;
+  gap: 40px;
+  background-color: $white;
+  color: $main-black;
+  padding: 48px 18px;
+  position: relative;
+}
+.faq-title-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 0 18px;
+
+  h2 {
+    text-transform: uppercase;
+    font-family: $font-stack;
+    line-height: 108%;
+    font-size: 44px;
+    letter-spacing: -0.64px;
+  }
+
+  p {
+    font-weight: 300;
+    font-size: 14px;
+    margin-top: 4px;
+    line-height: 170%;
+    letter-spacing: 0.24px;
+  }
+}
+.faq-button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 22px;
+  margin-top: 18px;
+  color: $orange;
+}
+.accordion-container {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: stretch;
+  gap: 14px;
+}
+.accordion {
+  display: flex;
+  max-width: 100%;
+  place-items: stretch stretch;
+  justify-content: space-between;
+  flex: 1;
+  flex-flow: column;
+  gap: 14px;
+  width: 100%;
+}
+.dropdown {
+  width: 100%;
+  z-index: 900;
+  text-align: left;
+  position: relative;
+  text-align: left;
+  display: flex;
+  flex-flow: column;
+  border-bottom: 1px solid $border-color;
+  justify-content: space-between;
+  align-items: center;
+}
+.dropdown-toggle {
+  position: relative;
+  color: #222222;
+  white-space: nowrap;
+  cursor: pointer;
+  display: flex;
+  flex: 1;
+  width: 100%;
+  gap: 8px;
+  padding-top: 12px;
+}
+.dropdown-title {
+  white-space: pre-wrap;
+  word-break: normal;
+  min-width: 0;
+  line-height: 150%;
+  font-size: 16px;
+}
+.dropdown-content {
+        color: #0c0c0cb3;
+        font-size: 14px;
+        line-height: 170%;
+}
+@media (min-width: 800px) {
+    .faq-section {
+        padding: clamp(56px, 8vh, 100px);
+        gap: 82px;
+    }
+    .accordion-container {
+          flex-flow: wrap;
+
+    }
+}
