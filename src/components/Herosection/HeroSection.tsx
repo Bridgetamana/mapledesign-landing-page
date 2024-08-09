@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import Logo from '../../assets/img/Logo.svg';
+import Logo from '../../assets/img/Logo.png';
 import Stars from "../../assets/img/star.svg";
 import Clients from "../../assets/img/clients.png"
 import { IoMdReturnRight, IoMdMenu, IoMdClose } from "react-icons/io";

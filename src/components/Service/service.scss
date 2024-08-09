@@ -2,49 +2,75 @@
 
 .section-three {
   padding-top: 48px;
+
+  @media (min-width: 900px) {
+    padding-top: 28px;
+  }
+  @media (min-width: 900px) {
+    padding-top: clamp(80px, 8vh, 124px);
+  }
 }
 .number-section {
   display: flex;
   flex-flow: column;
-  gap: 48px;
+  justify-content: space-between;
   align-items: stretch;
   width: 100%;
+  gap: 48px;
   margin: 0 auto;
   margin-bottom: 120px;
   padding: 0 16px;
+
+  @media (min-width: 450px) {
+    margin-bottom: 84px;
+    flex-flow: wrap;
+    padding: 0 18px;
+    gap: 40px;
+  }
+  @media (min-width: 768px) {
+    flex-flow: wrap;
+    padding: 0 28px;
+    gap: 48px;
+  }
+  @media (min-width: 1000px) {
+    padding-left: clamp(56px, 4.09vw, 70px);
+    padding-right: clamp(56px, 8vw, 200px);
+  }
 }
 .number-container {
   display: grid;
+  justify-content: flex-start;
   gap: 32px;
   grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
   grid-template-rows: auto;
   grid-auto-columns: 1fr;
   flex: 1;
   place-items: stretch end;
+
+  @media (min-width: 450px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+  @media (min-width: 900px) {
+    row-gap: 64px;
+    column-gap: 72px;
+  }
 }
 .number-details {
   display: flex;
   flex-flow: column;
   width: 100%;
   gap: 8px;
-}
-.number-title {
-  font-family: $font-stack;
-  text-transform: uppercase;
-  font-weight: 600;
-  color: $main-black;
-  letter-spacing: -0.8px;
-  height: 35px;
-  font-size: 48px;
-  line-height: 47%;
-}
-.number-description {
-  color: $main-black;
-  letter-spacing: 0.4px;
-  font-size: 14px;
-  line-height: 170%;
-}
 
+  @media (min-width: 450px) {
+    max-width: 241px;
+    gap: 4px;
+  }
+  @media (min-width: 768px) {
+    max-width: 241px;
+    gap: 12px;
+  }
+}
 // Service section
 .tag-title {
   color: $main-black;

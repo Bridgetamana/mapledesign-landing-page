@@ -57,10 +57,10 @@ const services: ServiceItem[] = [
 ];
 
 const Service = () => {
-    const [isEyeOpen, setIsEyeOpen] = useState(true);
-    const [isImageVisible, setIsImageVisible] = useState(true);
-    const [isTagsVisible, setIsTagsVisible] = useState(true);
-    const [isServiceNumberVisible, setIsServiceNumberVisible] = useState(false);
+    const [isEyeOpen, setIsEyeOpen] = useState(false);
+    const [isImageVisible, setIsImageVisible] = useState(false);
+    const [isTagsVisible, setIsTagsVisible] = useState(false);
+    const [isServiceNumberVisible, setIsServiceNumberVisible] = useState(true);
     const toggleVisibility = () => {
         if (window.innerWidth < 900) {
             setIsEyeOpen(!isEyeOpen);
@@ -75,7 +75,7 @@ const Service = () => {
                 setIsEyeOpen(true);
                 setIsImageVisible(true);
                 setIsTagsVisible(true);
-                setIsServiceNumberVisible(false);
+                setIsServiceNumberVisible(true);
             }
         };
         window.addEventListener('resize', handleResize);
