@@ -6,7 +6,7 @@ import Stars from "../../assets/img/star.svg";
 
 const Contact = () => {
     return (
-        <div>
+        <div id='contact-us'>
             <section className="contact-section">
                 <div className="contact-title-container">
                     <div className="slot-container">
@@ -25,103 +25,19 @@ const Contact = () => {
                                 <p className='client-text'>Loved by founders worldwide</p>
                             </div>
                         </div>
-                        <a href="#" className="client-link">
-                            <div>
-                                <IoMdReturnRight />
-                                <p>Free discovery call</p>
-                            </div>
-                            <div className="underline"></div>
-                        </a>
-                    </div>
-                </div>
-                <div className="contact-form">
-                    <div>
-                        <form>
-                            <div className='form-field-container'>
-                                <div className="first-field">
-                                    <div className='input-field'>
-                                        <label htmlFor="first-name">First and last name</label>
-                                        <input type="text"  maxLength={256} name='first-Name' placeholder='Your name' required />
-                                    </div>
-                                    <div className='input-field'>
-                                        <label htmlFor="email">Business email</label>
-                                        <input type="email" className='input-field'
-                                            name='email' placeholder='name@company.com' required />
-                                    </div>
-
-                                </div>
-                                <div className="second-field">
-                                    <div className='input-field'>
-                                        <label htmlFor="company-name">Company name</label>
-                                        <input type="text" className='input-field' maxLength={256} name='company-name' placeholder='ACME Inc' required />
-                                    </div>
-                                    <div className='input-field'>
-                                        <label htmlFor="website-url">Wbsite URL</label>
-                                        <input type="website-url" className='input-field'
-                                            name='website-url' placeholder='www.yourwebsite.com' required />
-                                    </div>
-
-                                </div>
-                            </div>
-                            {/* <div className="radio-container">
-                                <div className="check-button">
-                                    <div>
-                                        <IoIosCheckmarkCircle />
-                                        <p>UX and / or UI Audit</p>
-                                    </div>
-                                </div>
-                                <div className="check-button">
-                                    <div>
-                                        <IoIosCheckmarkCircle />
-                                        <p>Branding</p>
-                                    </div>
-                                </div>
-                                <div className="check-button">
-                                    <div>
-                                        <IoIosCheckmarkCircle />
-                                        <p>Website design</p>
-                                    </div>
-                                </div>
-                                <div className="check-button">
-                                    <div>
-                                        <IoIosCheckmarkCircle />
-                                        <p>Mobile/Web apps</p>
-                                    </div>
-                                </div>
-                                <div className="check-button">
-                                    <div>
-                                        <IoIosCheckmarkCircle />
-                                        <p>MVP/POC</p>
-                                    </div>
-                                </div>
-                            </div> */}
-                            {/* <div className="select-container">
+                        <div className='main-button-wrapper'>
+                            <a href="#" className='main-button'>
                                 <div>
-                                    <label htmlFor="">What stage are you at in your business?</label>
-                                    <select name="business-stage" id="">
-                                        <option value="I am launching a new project from scratch">I am launching a new project from scratch</option>
-                                        <option value="Linkedin"> need help with a redesign project</option>
-                                        <option value="I need ongoing design support">I need ongoing design support</option>
-                                        <option value="Something else">Something else</option>
-                                    </select>
+                                    <IoMdReturnRight />
+                                    <p>Free discovery call</p>
                                 </div>
-                                <div>
-                                    <label htmlFor="">How did you hear about us</label>
-                                    <select name="business-stage" id="">
-                                        <option value="X-twitter">X-twitter</option>
-                                        <option value="Linkedin"> LinkedIn</option>
-                                        <option value="Instagram">Instagram</option>
-                                        <option value="Youtube">Youtube</option>
-                                        <option value="Google">Google</option>
-                                    </select>
-                                </div>
-                                <button type="submit" className='form-submit-button'>Send message</button>
-                            </div> */}
-                        </form>
+                                <div className='bottom-border'></div>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div className="footer-links">
-                    <div className="footer-container">
+                    <div className="footer-container1">
                         <div className="footer-link">
                             <p>Our contacts</p>
                             <div className="details">
@@ -137,7 +53,7 @@ const Contact = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="footer-container">
+                    <div className="footer-container2">
                         <p className='gray'>Visit</p>
                         <div className="link-block">
                             <div className="link">
@@ -166,10 +82,10 @@ const Contact = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="footer-container">
+                    <div className="footer-container2">
                         <p className='gray'>Connect</p>
                         <div className="link-block">
-                
+
                             <div className="link">
                                 <a href="#">twitter</a>
                                 <GoArrowUpRight />
@@ -206,7 +122,7 @@ const Contact = () => {
                     <p>Operating remotely</p>
                     <a href="#">
                         <p>Back to top</p>
-                        <IoMdArrowUp fill=' #fff6'/></a>
+                        <IoMdArrowUp fill=' #fff6' /></a>
                 </div>
             </section>
         </div>

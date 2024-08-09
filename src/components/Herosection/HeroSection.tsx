@@ -44,11 +44,11 @@ const HeroSection = () => {
                         <nav className={isMenuOpen ? 'open' : ''}>
                             <ul className='nav-items'>
                                 <li><a href="#about">about</a></li>
-                                <li><a href="#about">services</a></li>
-                                <li><a href="#about">work</a></li>
-                                <li><a href="#about">pricing</a></li>
-                                <li><a href="#about">faqs</a></li>
-                                <li><a href="#about" className='yellow'>contact us</a></li>
+                                <li><a href="#service">services</a></li>
+                                <li><a href="#work">work</a></li>
+                                <li><a href="#price">pricing</a></li>
+                                <li><a href="#faq">faqs</a></li>
+                                <li><a href="#contact-us" className='yellow'>contact us</a></li>
                             </ul>
                             <button className={`toggle-button ${isMenuOpen ? 'exit' : 'menu'}`} onClick={toggleMenu}>
                                 <IoMdMenu className={`icon ${isMenuOpen ? 'hidden' : ''}`} />
@@ -62,7 +62,7 @@ const HeroSection = () => {
                             <div>
 
                             <a href="#about">About</a>
-                            <a href="#services">Services</a>
+                            <a href="#service">Services</a>
                             <a href="#work">Work</a>
                             <a href="#price">Pricing</a>
                             <a href="#faqs">FAQs</a>

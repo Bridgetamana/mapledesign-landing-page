@@ -9,34 +9,56 @@
   position: relative;
 }
 .testimonial-title-container {
-  position: relative;
-  z-index: 1;
   width: 100%;
   padding: 0 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 
+  @media (min-width: 1000px) {
+    width: 1070px;
+    gap: 10px;
+  }
   h2 {
     text-transform: uppercase;
+    height: auto;
+    margin-bottom: 4px;
     font-family: $font-stack;
     line-height: 108%;
     font-size: 44px;
-    letter-spacing: -0.64px;
+    letter-spacing: 1.7px;
+    width: 100%;
+    max-width: 1250px;
+
+    @media (min-width: 768px) {
+      font-size: 48px;
+      margin-bottom: 8px;
+    }
+    @media (min-width: 1000px) {
+      font-size: 84px;
+    }
   }
 
-  p {
-    font-weight: 300;
+  span {
+    color: $main-black;
+    font-weight: 400;
     font-size: 14px;
-    margin-top: 4px;
     line-height: 170%;
-    letter-spacing: 0.24px;
+
+    @media (min-width: 768px) {
+      font-size: 18px;
+      line-height: 150%;
+    }
+    @media (min-width: 1000px) {
+      font-size: 20px;
+    }
   }
 }
-.testimonial-button {
+.main-button-wrapper {
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 22px;
-  margin-top: 18px;
-  color: $yellow;
+  .main-button {
+    @include button-styles($yellow);
+  }
 }
 .testimonials-container {
   display: flex;
@@ -82,22 +104,13 @@ z-index: 120;
     position: absolute;
     inset: 0%;
 }
-.pause {
-  z-index: 100;
-  border-radius: 50px;
-  background-color: #ffffff1a;
-  backdrop-filter: blur(16px);
-padding: 10px;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-}
 .play {
   z-index: 100;
   border-radius: 50px;
   background-color: #ffffff1a;
   backdrop-filter: blur(16px);
 padding: 10px;
+font-size: 24px;
   flex-flow: column;
   justify-content: center;
   align-items: center;

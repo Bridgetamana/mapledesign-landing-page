@@ -1,102 +1,164 @@
 @import "../../app";
+
 .faq-section {
   display: flex;
-  flex-flow: column;
-  gap: 40px;
+  flex-direction: column;
+  gap: 32px;
+  height: 100%;
   background-color: $white;
   color: $main-black;
   padding: 48px 18px;
-  position: relative;
-}
+
+  @media (min-width: 768px) {
+    padding: 32px 28px;
+  }
+  @media (min-width: 768px) {
+    padding: clamp(56px, 8vh, 100px);
+    gap: 82px;
+  }
 .faq-title-container {
-  position: relative;
-  z-index: 1;
   width: 100%;
   padding: 0 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 
+  @media (min-width: 1000px) {
+    width: 1070px;
+    gap: 10px;
+  }
   h2 {
     text-transform: uppercase;
+    height: auto;
+    margin-bottom: 4px;
     font-family: $font-stack;
     line-height: 108%;
     font-size: 44px;
-    letter-spacing: -0.64px;
+    letter-spacing: 1.7px;
+    width: 100%;
+    max-width: 1250px;
+
+    @media (min-width: 768px) {
+      font-size: 48px;
+      margin-bottom: 8px;
+    }
+    @media (min-width: 1000px) {
+      font-size: 84px;
+    }
   }
 
-  p {
-    font-weight: 300;
+  span {
+    color: $main-black;
+    font-weight: 400;
     font-size: 14px;
-    margin-top: 4px;
     line-height: 170%;
-    letter-spacing: 0.24px;
+
+    @media (min-width: 768px) {
+      font-size: 18px;
+      line-height: 150%;
+    }
+    @media (min-width: 1000px) {
+      font-size: 20px;
+    }
   }
 }
-.faq-button {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 22px;
-  margin-top: 18px;
-  color: $orange;
-}
-.accordion-container {
-  width: 100%;
-  display: flex;
-  flex-flow: column;
-  justify-content: stretch;
-  gap: 14px;
-}
-.accordion {
-  display: flex;
-  max-width: 100%;
-  place-items: stretch stretch;
-  justify-content: space-between;
-  flex: 1;
-  flex-flow: column;
-  gap: 14px;
-  width: 100%;
-}
-.dropdown {
-  width: 100%;
-  z-index: 900;
-  text-align: left;
-  position: relative;
-  text-align: left;
-  display: flex;
-  flex-flow: column;
-  border-bottom: 1px solid $border-color;
-  justify-content: space-between;
-  align-items: center;
-}
-.dropdown-toggle {
-  position: relative;
-  color: #222222;
-  white-space: nowrap;
-  cursor: pointer;
-  display: flex;
-  flex: 1;
-  width: 100%;
-  gap: 8px;
-  padding-top: 12px;
-}
-.dropdown-title {
-  white-space: pre-wrap;
-  word-break: normal;
-  min-width: 0;
-  line-height: 150%;
-  font-size: 16px;
-}
-.dropdown-content {
-        color: #0c0c0cb3;
-        font-size: 14px;
-        line-height: 170%;
-}
-@media (min-width: 800px) {
-    .faq-section {
-        padding: clamp(56px, 8vh, 100px);
-        gap: 82px;
+  .main-button-wrapper {
+    display: flex;
+    .main-button {
+      @include button-styles($orange);
     }
-    .accordion-container {
-          flex-flow: wrap;
+  }
+  .accordion-container {
+    width: 100%;
+    display: flex;
+    justify-content: stretch;
+    flex-direction: column;
+    gap: 14px;
 
+    @media (min-width: 768px) {
+      flex-direction: row;
+      row-gap: 16px;
+      column-gap: 40px;
     }
+
+    .accordion {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      justify-content: space-between;
+      place-items: stretch stretch;
+      align-items: start;
+      gap: 14px;
+      width: 100%;
+      max-width: 100%;
+      @media (min-width: 768px) {
+        gap: 16px;
+      }
+
+      .dropdown {
+        width: 100%;
+        z-index: 900;
+        text-align: left;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        border-bottom: 1px solid $border-color;
+
+        .dropdown-toggle {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          width: 100%;
+          padding-top: 12px;
+          padding-bottom: 16px;
+          color: #222222;
+          cursor: pointer;
+
+          h3 {
+            width: 100%;
+            min-width: 0;
+            line-height: 150%;
+            font-size: 16px;
+
+            @media (min-width:768px) {
+              line-height: 108%;
+            }
+            @media (min-width:1000px) {
+              font-size: 20px;
+            }
+          }
+          .icon {
+            transition: transform 0.3s ease;
+          }
+
+          &.active .icon {
+            transform: rotate(180deg);
+          }
+        }
+
+        .dropdown-content {
+          color: #0c0c0cb3;
+          line-height: 170%;
+          line-height: 170%;
+          max-height: 0;
+          max-width: 100%;
+          overflow: hidden;
+          transition: max-height 0.3s ease-in-out;
+
+          @media (min-width: 768px) {
+            line-height: 150%;
+            text-align: left;
+          }
+          @media (min-width: 1000px) {
+            font-size: 18px;
+          }
+        }
+
+        &.active .dropdown-content {
+          max-height: 500px;
+        }
+      }
+    }
+  }
 }

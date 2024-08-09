@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './Testimonial.scss';
 import { IoMdReturnRight, IoMdPause, IoMdPlay, IoIosStar } from "react-icons/io";
 import Testimonial1 from '../../assets/img/testimonial1.jpg';
@@ -5,14 +6,20 @@ import Testimonial3 from '../../assets/img/testimonial3.jpg';
 
 const Testimonial = () => {
     return (
-        <div id='testimonials'>
+        <div>
             <section className='testimonial-section'>
                 <div className="testimonial-title-container">
                     <h2>Results speak for themselves so do our clients</h2>
                     <p className="testimonial-section-description">Guilding ventures to brand eminence through innovative designs</p>
-                    <div className="testimonial-button">
-                        <IoMdReturnRight />
-                        <p>Check our pricing</p>
+                    <div className='main-button-wrapper'>
+                        <a href="#" className='main-button'>
+                            <div>
+
+                                <IoMdReturnRight />
+                                <p>Free discovery call</p>
+                            </div>
+                            <div className='bottom-border'></div>
+                        </a>
                     </div>
                 </div>
                 <div className="testimonials-container">
@@ -25,9 +32,6 @@ const Testimonial = () => {
                             <div className="video-state-button">
                                 <div className="play">
                                     <IoMdPlay />
-                                </div>
-                                <div className="pause">
-                                    <IoMdPause />
                                 </div>
                             </div>
                             <div className="testimonial-video-title">
@@ -58,9 +62,6 @@ const Testimonial = () => {
                                 <div className="play">
                                     <IoMdPlay />
                                 </div>
-                                <div className="pause">
-                                    <IoMdPause />
-                                </div>
                             </div>
                             <div className="testimonial-video-title">
                                 <div className="textimonial-text-container">
@@ -89,9 +90,6 @@ const Testimonial = () => {
                             <div className="video-state-button">
                                 <div className="play">
                                     <IoMdPlay />
-                                </div>
-                                <div className="pause">
-                                    <IoMdPause />
                                 </div>
                             </div>
                             <div className="testimonial-video-title">
