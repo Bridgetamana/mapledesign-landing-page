@@ -1,6 +1,5 @@
-import { useState } from 'react';
 import './Testimonial.scss';
-import { IoMdReturnRight, IoMdPause, IoMdPlay, IoIosStar } from "react-icons/io";
+import { IoMdReturnRight, IoMdPlay, IoIosStar } from "react-icons/io";
 import Testimonial1 from '../../assets/img/testimonial1.jpg';
 import Testimonial3 from '../../assets/img/testimonial3.jpg';
 
