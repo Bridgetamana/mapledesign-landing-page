@@ -5,21 +5,50 @@ $white: #ffffff;
 $yellow: #ffd647;
 $orange: #ff6b00;
 $border-color: #e7e7e7;
-$black-opacity: rgba(12,12,12,.1);
+$black-opacity: rgba(12, 12, 12, 0.1);
 $grey: whitesmoke;
 $black: #000;
-$white-border: rgba(255, 255, 255, .1);
+$white-border: rgba(255, 255, 255, 0.1);
+$gray-border: #ffffff1a;
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // border: 1px solid red;
 }
 body {
-    font-family: $font-body;
+  font-family: $font-body;
+  font-size: 14px;
+  line-height: 20px;
 }
 a {
-    text-decoration: none;
+  text-decoration: none;
+}
+li {
+  list-style: none;
 }
 img {
+  width: 100%;
+}
+button {
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+@mixin button-styles($text-color, $border-color: $yellow) {
+  max-width: 100%;
+  color: $text-color;
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .bottom-border {
+    background-color: $border-color;
+    height: 1px;
     width: 100%;
+    margin-top: 5px;
+  }
 }
