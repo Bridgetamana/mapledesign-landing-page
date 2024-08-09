@@ -87,7 +87,14 @@
   width: auto;
   height: auto;
   position: static;
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  flex-wrap: nowrap;
+  scroll-snap-type: x mandatory;
+}
+.sticky-position::-webkit-scrollbar {
+  display: none;
 }
 .service-container {
   display: flex;

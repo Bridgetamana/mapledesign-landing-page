@@ -82,6 +82,8 @@ const Service = () => {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
+    
+
     return (
         <div className="section-three">
             <section className="number-section">

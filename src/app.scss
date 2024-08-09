@@ -16,6 +16,10 @@ $gray-border: #ffffff1a;
   box-sizing: border-box;
   // border: 1px solid red;
 }
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: $font-body;
   font-size: 14px;
