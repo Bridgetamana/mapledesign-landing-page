@@ -115,9 +115,6 @@ const HeroSection = () => {
                     </div>
                 </div>
             </section>
-            <div className="trail">
-                <img src="" alt="" />
-            </div>
             <div className='companies-slider'>
                 <div>
                     <img src={Carscoup} alt="" className='logo-img_1' />

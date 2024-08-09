@@ -64,16 +64,22 @@ const Price = () => {
     ];
 
     return (
-        <div>
+        <div id='price'>
             <section className="price-section">
                 <div className="price-title-container">
                     <h2>Clear Pricing</h2>
                     <span>Guiding ventures to brand eminence through innovative designs</span>
-                    <div className="price-button">
-                        <IoMdReturnRight />
-                        <p>Book a free discovery call</p>
+                    <div className='main-button-wrapper'>
+
+                    <a href="#" className='main-button'>
+                        <div>
+
+                            <IoMdReturnRight />
+                            <p>Free discovery call</p>
+                        </div>
+                        <div className='bottom-border'></div>
+                    </a>
                     </div>
-                    <div className='price-border'></div>
                 </div>
                 <div className="plans-wrapper">
                     {plans.map((plan, index) => (

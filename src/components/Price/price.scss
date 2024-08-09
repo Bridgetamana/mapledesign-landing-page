@@ -7,41 +7,72 @@
   height: 100%;
   padding: 48px 18px;
   gap: 32px;
-}
 
-// Price Title Container
+  @media (min-width: 768px) {
+    padding: 72px 28px;
+    gap: 56px;
+  }
+  @media (min-width: 1000px) {
+    padding: 72px clamp(56px, 4.09vw, 70px);
+    gap: clamp(56px, 4.09vw, 70px);
+  }
+}
 .price-title-container {
   position: relative;
   z-index: 1;
   width: 100%;
   padding: 0 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 
+  @media (min-width: 1000px) {
+    width: 1070;
+    gap: 10px;
+  }
   h2 {
     text-transform: uppercase;
+    height: auto;
+    margin-bottom: 4px;
     font-family: $font-stack;
     line-height: 108%;
     font-size: 44px;
-    letter-spacing: -0.64px;
+    letter-spacing: 1.7px;
+    width: 100%;
+    max-width: 1250px;
+
+    @media (min-width: 768px) {
+      font-size: 48px;
+      margin-bottom: 8px;
+      height: 41px;
+      letter-spacing: -1.7px;
+    }
+    @media (min-width: 1000px) {
+      height: 71px;
+      font-size: 84px;
+    }
   }
 
   span {
     color: $main-black;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 14px;
-    margin-top: 4px;
     line-height: 170%;
-    letter-spacing: 0.24px;
+
+    @media (min-width: 768px) {
+      font-size: 18px;
+      line-height: 150%;
+    }
+    @media (min-width: 1000px) {
+      font-size: 20px;
+    }
   }
 }
-
-// Price Button
-.price-button {
+.main-button-wrapper {
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 22px;
-  margin-top: 18px;
-  color: $orange;
+  .main-button {
+    @include button-styles($orange);
+  }
 }
 
 // Plans Wrapper
@@ -116,8 +147,6 @@
     }
   }
 }
-
-// Price Container
 .price-container {
   display: flex;
   flex-direction: column;
@@ -139,8 +168,6 @@
     margin-top: 4px;
   }
 }
-
-// Price Text Container
 .price-text-container {
   display: flex;
   flex-direction: column;
@@ -161,8 +188,6 @@
     }
   }
 }
-
-// Plans Button Container
 .plans-button-container {
   display: flex;
   flex-direction: column;
@@ -198,8 +223,6 @@
     }
   }
 }
-
-// Price Buttons Container
 .price-buttons-container {
   display: flex;
   flex-direction: column;
@@ -213,8 +236,6 @@
     gap: 0;
   }
 }
-
-// Price Textholder
 .price-textholder {
   display: flex;
   flex-direction: column;
@@ -241,8 +262,6 @@
     font-size: 14px;
   }
 }
-
-// Price Action Button
 .price-action-button {
   cursor: pointer;
   line-height: inherit;

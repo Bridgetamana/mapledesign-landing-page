@@ -35,7 +35,7 @@ button {
   outline: none;
   cursor: pointer;
 }
-@mixin button-styles($text-color, $border-color: $yellow) {
+@mixin button-styles($text-color, $border-color: $text-color) {
   max-width: 100%;
   color: $text-color;
   @media (min-width: 768px) {
