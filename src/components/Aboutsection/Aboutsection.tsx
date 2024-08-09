@@ -12,14 +12,16 @@ const Aboutsection = () => {
         <div id="about">
             <section className="about-section" >
                 <div className="about-wrapper">
-                    <p className="title-tag">About us</p>
+                    <p className="about-title-tag">About us</p>
                     <div className="description-container">
                         <h4 className="title-description">We partner with companies, brands and startups of all sizes from across the gloBe</h4>
-                        <a href="#">
+                        <a href="#" className='main-button'>
                             <div>
+
                                 <p>Check our work in Figma</p>
                                 <IoArrowForward />
                             </div>
+                            <div className='bottom-border'></div>
                         </a>
                     </div>
                 </div>

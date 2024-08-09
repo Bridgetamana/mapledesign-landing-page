@@ -75,9 +75,7 @@ const HeroSection = () => {
                 </div>
             </div>
             <section className="hero-section">
-                {/* <div className='logo-container'>
-                    <img src={Logo} alt="Mapledesign Logo" />
-                </div> */}
+                
                 <div className="title-container">
                     <span className="slot-tag">
                         <span className='dot'></span>
