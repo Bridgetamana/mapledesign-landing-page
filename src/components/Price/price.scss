@@ -87,7 +87,6 @@
   @media (min-width: 768px) {
     grid-template-rows: auto auto;
     grid-template-columns: 1fr 1fr;
-    max-width: 80%;
     margin: 0 auto;
 
     .plans-container:nth-child(3) {
@@ -162,10 +161,17 @@
     line-height: 33px;
     font-size: 18px;
     letter-spacing: -0.56px;
+
+    @media (min-width: 768px) {
+          font-size: 24px;
+    }
   }
 
   .price-description {
     margin-top: 4px;
+     @media (min-width: 768px) {
+          font-size: 16px;
+    }
   }
 }
 .price-text-container {
@@ -175,6 +181,10 @@
   align-items: flex-start;
   gap: 16px;
   padding: 14px 16px 16px;
+
+   @media (min-width: 768px) {
+          font-size: 16px;
+    }
 
   .plans-service-wrapper {
     display: flex;
@@ -278,5 +288,15 @@
   @media (min-width: 768px) {
     width: 50%;
     padding: 18px;
+  }
+}
+.plans-container:nth-child(2) {
+  @media (min-width: 768px) {
+    width: 500px;
+  }
+}
+.plans-container:nth-child(1) {
+  @media (min-width: 768px) {
+    width: 500px;
   }
 }

@@ -20,7 +20,8 @@
   gap: 6px;
 
   @media (min-width: 1000px) {
-    width: 1070;
+    width: 1070px;
+        padding: 72px clamp(56px, 4.09vw, 70px);
     gap: 10px;
   }
   h2 {

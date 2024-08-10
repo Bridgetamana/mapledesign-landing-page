@@ -62,6 +62,29 @@ const Work = () => {
                         <div className="slides">
                             <img src={Casestudyimage4} alt="" />
                         </div>
+                        <div className="slides">
+                            <img src={Casestudyimage1} alt="" />
+                        </div>
+                        <div className="slides">
+                            <img src={Casestudyimage2} alt="" />
+                        </div>
+                        <div className="slides">
+                            <img src={Casestudyimage3} alt="" />
+                        </div>
+                        <div className="slides">
+                            <img src={Casestudyimage4} alt="" />
+                        </div><div className="slides">
+                            <img src={Casestudyimage1} alt="" />
+                        </div>
+                        <div className="slides">
+                            <img src={Casestudyimage2} alt="" />
+                        </div>
+                        <div className="slides">
+                            <img src={Casestudyimage3} alt="" />
+                        </div>
+                        <div className="slides">
+                            <img src={Casestudyimage4} alt="" />
+                        </div>
                         
                     </div>
                 </div>
