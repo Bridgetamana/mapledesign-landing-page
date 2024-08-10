@@ -52,17 +52,41 @@
   flex-flow: column;
   width: 100%;
   gap: 8px;
-  font-size: 16px;
 
   @media (min-width: 450px) {
     max-width: 241px;
     gap: 4px;
-    font-size: 18px;
   }
   @media (min-width: 768px) {
     max-width: 241px;
     gap: 12px;
-    font-size: 20px;
+  }
+  h2 {
+    letter-spacing: -0.8px;
+    height: 35px;
+    font-size: 38px;
+    line-height: 108%;
+    @media (min-width: 768px) {
+      height: 31%;
+      font-size: 40px;
+      line-height: 114%;
+      letter-spacing: -1.5px;
+    }
+    @media (min-width: 768px) {
+      height: 40%;
+      font-size: 74px;
+      line-height: 108%;
+    }
+  }
+  div {
+    letter-spacing: 0.4px;
+    line-height: 170%;
+    @media (min-width: 768px) {
+      line-height: 150%;
+    }
+    @media (min-width: 768px) {
+      font-size: 20px;
+    }
   }
 }
 // Service section
@@ -81,19 +105,10 @@
 .sticky-position {
   width: auto;
   height: auto;
-  position: static;
-  overflow-x: auto;
   overflow-y: hidden;
-  display: flex;
-  flex-wrap: nowrap;
-  scroll-snap-type: x mandatory;
-  @media (min-width: 768px) {
-    grid-template-rows: auto auto auto;
+  display: grid;
+  @media (min-width: 445px) {
     grid-template-columns: 1fr 1fr;
-    grid-auto-columns: 1fr;
-    grid-auto-flow: row dense;
-    justify-items: stretch;
-    display: grid;
   }
 }
 .sticky-position::-webkit-scrollbar {
