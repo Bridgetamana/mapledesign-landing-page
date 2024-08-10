@@ -65,7 +65,7 @@ const HeroSection = () => {
                             <a href="#service">Services</a>
                             <a href="#work">Work</a>
                             <a href="#price">Pricing</a>
-                            <a href="#faqs">FAQs</a>
+                            <a href="#faq">FAQs</a>
                             </div>
                         </div>
                             <a href="#contact-us " className='yellow-nav-link'>Contact us

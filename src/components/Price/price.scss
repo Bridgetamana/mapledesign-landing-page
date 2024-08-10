@@ -27,7 +27,7 @@
   gap: 6px;
 
   @media (min-width: 1000px) {
-    width: 1070;
+    width: 1070px;
     gap: 10px;
   }
   h2 {
@@ -87,7 +87,7 @@
   @media (min-width: 768px) {
     grid-template-rows: auto auto;
     grid-template-columns: 1fr 1fr;
-    max-width: 1200px;
+    max-width: 80%;
     margin: 0 auto;
 
     .plans-container:nth-child(3) {

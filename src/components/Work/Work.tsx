@@ -12,11 +12,17 @@ const Work = () => {
                 <div className="work-title-container">
                     <h2>our case studies</h2>
                     <span>Guiding ventures to brand eminence through innovative designs</span>
-                    <div className="work-button">
-                        <IoMdReturnRight />
-                        <p>Check our work</p>
+                    <div className='main-button-wrapper'>
+
+                        <a href="#" className='main-button'>
+                            <div>
+
+                                <IoMdReturnRight />
+                                <p>Free discovery call</p>
+                            </div>
+                            <div className='bottom-border'></div>
+                        </a>
                     </div>
-                    <div className='work-border'></div>
                 </div>
                 <div className="slide-wrapper">
                     <div className="slider">

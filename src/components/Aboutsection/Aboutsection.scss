@@ -39,29 +39,11 @@
   @media (min-width: 1000px) {
     padding-left: clamp(56px, 4.09vw, 70px);
     padding-right: clamp(56px, 4.09vw, 100px);
+    padding-bottom: clamp(56px, 4.09vw, 100px);
     column-gap: 32px;
     row-gap: 48px;
   }
 
-  .title-tag {
-    line-height: 108%;
-    letter-spacing: 0.2px;
-    min-width: 70px;
-    margin-top: 0;
-    font-size: 12px;
-    text-transform: uppercase;
-    overflow-wrap: normal;
-    height: 100%;
-    font-weight: 600;
-    margin-bottom: 48px;
-
-    @media (min-width: 768px) {
-      letter-spacing: 0.24px;
-      min-width: 100px;
-      margin-top: 4px;
-      margin-bottom: 0;
-    }
-  }
   .description-container {
     display: flex;
     flex-flow: column;
@@ -73,7 +55,6 @@
       width: 70%;
       gap: 26px;
     }
-
     @media (min-width: 768px) {
       width: 520px;
     }
@@ -104,12 +85,24 @@
   }
 }
 .title-tag {
-  margin-bottom: 48px;
+  line-height: 108%;
   letter-spacing: 0.2px;
   min-width: 70px;
+  margin-top: 0;
   font-size: 12px;
-  font-weight: 700;
   text-transform: uppercase;
+  overflow-wrap: normal;
+  height: 100%;
+  font-weight: 600;
+  margin-bottom: 48px;
+
+  @media (min-width: 768px) {
+    letter-spacing: 0.24px;
+    min-width: 100px;
+    margin-top: 4px;
+    margin-bottom: 0;
+    font-size: 18px;
+  }
 }
 
 // Slides
@@ -123,7 +116,7 @@
   @media (min-width: 560px) {
     padding-left: 18px;
   }
-   @media (min-width: 768px) {
+  @media (min-width: 768px) {
     padding-left: 28px;
   }
 }
@@ -145,7 +138,7 @@
     height: 240px;
     flex-shrink: 0;
 
-    @media (min-width:450px) {
+    @media (min-width: 450px) {
       height: 280px;
     }
     @media (min-width: 768px) {

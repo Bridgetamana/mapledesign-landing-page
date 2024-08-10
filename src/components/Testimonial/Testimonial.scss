@@ -5,10 +5,22 @@
   gap: 40px;
   background-color: #000;
   color: $white;
-  padding: 48px 18px;
   position: relative;
+  padding: 48px 18px;
+  gap: 32px;
+
+  @media (min-width: 768px) {
+    padding: 72px 28px;
+    gap: 56px;
+  }
+  @media (min-width: 1000px) {
+    padding: 72px clamp(56px, 4.09vw, 70px);
+    gap: clamp(56px, 4.09vw, 70px);
+  }
 }
 .testimonial-title-container {
+  position: relative;
+  z-index: 1;
   width: 100%;
   padding: 0 18px;
   display: flex;
@@ -28,11 +40,12 @@
     font-size: 44px;
     letter-spacing: 1.7px;
     width: 100%;
-    max-width: 1250px;
+    max-width: 1070px;
 
     @media (min-width: 768px) {
       font-size: 48px;
       margin-bottom: 8px;
+      letter-spacing: -1.7px;
     }
     @media (min-width: 1000px) {
       font-size: 84px;
@@ -40,7 +53,7 @@
   }
 
   span {
-    color: $main-black;
+    color: #ffffff80;
     font-weight: 400;
     font-size: 14px;
     line-height: 170%;
@@ -53,11 +66,11 @@
       font-size: 20px;
     }
   }
-}
-.main-button-wrapper {
-  display: flex;
-  .main-button {
-    @include button-styles($yellow);
+  .main-button-wrapper {
+    display: flex;
+    .main-button {
+      @include button-styles($yellow!important);
+    }
   }
 }
 .testimonials-container {
@@ -73,82 +86,92 @@
   position: relative;
   height: 268px;
   z-index: 100;
+  overflow: hidden;
 }
 .testimonial-wrapper {
   z-index: 100;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    display: flex;
-    width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  display: flex;
+  min-width: 300px;
+  width: 300px;
     position: relative;
-    overflow: hidden;
+  overflow: hidden;
 }
 .testimonial-image {
-    position: absolute;
-    margin: auto;
-    width: 100%;
-    height: 100%;
-    right: -100%;
-    bottom: -100%;
-    top: -100%;
-    left: -100%;
-    z-index: -100;
-
+  position: absolute;
+  margin: auto;
+  min-width: 300px;
+  width: 300px;
+  height: 300px; 
+  right: 0;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  z-index: -100;
+    max-width: 100%;
+  max-height: 100%;
 }
+
+@media (min-width: 768px) {
+  .testimonial-image {
+    width: 350px; 
+    height: 350px; 
+  }
+}
+
 .video-state-button {
-z-index: 120;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    position: absolute;
-    inset: 0%;
+  z-index: 120;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  inset: 0%;
 }
 .play {
   z-index: 100;
   border-radius: 50px;
   background-color: #ffffff1a;
   backdrop-filter: blur(16px);
-padding: 10px;
-font-size: 24px;
+  padding: 10px;
+  font-size: 24px;
   flex-flow: column;
   justify-content: center;
   align-items: center;
 }
 .testimonial-video-title {
-  z-index: 101;
   position: absolute;
-  inset: auto 0% 0%;
-  // top: 100%;
+  bottom: 0;
   display: flex;
   padding: 8px;
-  gap: 12px;
+  width: 100%;
   flex-flow: wrap;
   justify-content: space-between;
   align-items: center;
   opacity: 1;
 }
-.textimonial-text-container {
-    display: flex;
-    gap: 4px;
-    flex-flow: column;
-    align-items: flex-start;
-    order: -1;
-    
-    h4 {
-      color: $white;
-      text-transform: uppercase;
-      font-family: $font-stack;
-      font-weight: 600;
-      font-size: 14px;
-      line-height: 1.2;
-    }
-    p{
-      color: #fff9;
-      font-weight: 300;
-      font-size: 12px;
-      line-height: 14px;
-    }
+.testimonial-text-container {
+  display: flex;
+  gap: 4px;
+  flex-flow: column;
+  align-items: flex-start;
+  order: -1;
+
+  h4 {
+    color: $white;
+    text-transform: uppercase;
+    font-family: $font-stack;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.2;
+  }
+  p {
+    color: #fff9;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 14px;
+  }
 }
 .testimonial-rate-container {
   display: flex;
@@ -173,15 +196,8 @@ font-size: 24px;
     color: #fff9;
   }
 }
-.testimonial-black-overlay {
-  z-index: 100;
-  background-image: linear-gradient(#fff0, #0009);
-  position: absolute;
-  inset: 0%;
-}
 @media (min-width: 480px) {
-    .testimonials-container {
-  flex-flow: row;
+  .testimonials-container {
+    flex-flow: row;
+  }
 }
-}
-
